@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 
 <head>
   <meta charset="UTF-8" />
@@ -8,31 +8,48 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <title>Berita Terkini, Aktual</title>
   <style>
-    swiper-container {
-      width: 100%;
+    html,
+    body {
+      position: relative;
       height: 100%;
     }
 
-    swiper-slide {
-      text-align: center;
+    body {
+      background: #eee;
+      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      color: #000;
+      margin: 0;
+      padding: 0;
+    }
+
+    .swiper {
+      width: 100%;
+    }
+
+    .swiper-slide {
       font-size: 18px;
       background: #fff;
       display: flex;
-      justify-content: center;
-      align-items: center;
     }
 
-    swiper-slide img {
+    .swiper-slide img {
       display: block;
-      width: 100%;
-      height: 100%;
+      margin-left: 10px;
       object-fit: cover;
+    }
+
+    .swiper-pagination-vertical.swiper-pagination-bullets,
+    .swiper-vertical>.swiper-pagination-bullets {
+      width: 34%;
+      top: 74%;
     }
   </style>
 </head>
 
-<body class="md:flex md:justify-between bg-[#151521] overflow-hidden">
-  <header class="w-[340px] h-[100dvh] py-10 px-8 rounded-tr-xl rounded-br-xl bg-[#232335] hidden md:block">
+<body class="flex md:justify-between bg-[#151521] overflow-hidden">
+  <header
+    class="w-[320px] h-[100dvh] py-10 px-8 rounded-tr-xl rounded-br-xl bg-[#232335] hidden md:block md:relative md:z-40">
     <nav>
       <a href="/">
         <img src="img/logo.png" alt="aktual" width="120" height="58" />
@@ -50,81 +67,109 @@
       </ul>
     </nav>
   </header>
-  <main class="h-[100dvh] w-full flex flex-col justify-center items-center">
-    <div class="flex flex-row items-end gap-4">
-      <div class="flex flex-col items-center gap-20">
-        <div id="slide1"
-          class="swiper-slider w-[400px] h-[800px] bg-[url('img/card-content.png')] brightness-90 bg-cover bg-center rounded-2xl flex flex-col justify-end px-10 gap-4">
-          <div class="flex flex-row items-center gap-5">
-            <span class="text-white text-[20px]">1.</span>
-            <h1 class="text-[#E9C46A] text-[20px]">
+  <main class="flex-1 md:mx-2">
+    <div class="swiper absolute md:relative mySwiper w-full md:max-w-md h-full">
+      <img src="img/logo.png" alt="" width="150" height="50" class="absolute top-5 bottom-0 z-20 left-10 md:hidden">
+      <div class="swiper-wrapper">
+        <div
+          class="swiper-container bg-[#151521] swiper-slide w-full h-screen md:!h-[800px] bg-[url('img/card-content.png')] brightness-90 bg-cover bg-center md:rounded-3xl flex flex-col justify-end px-10 gap-4 rounded-none">
+          <div class="flex flex-row items-center gap-5 relative z-40">
+            <span class="text-white text-sm md:text-[20px]">1.</span>
+            <h1 class="text-[#E9C46A] text-sm md:text-[20px]">
               Anwar Usman
             </h1>
-            <a href="">
+            <a href="" class="relative z-40">
               <div class="py-1 px-4 bg-[#D9D9D9]/20 rounded-xl">
-                <span class="text-white opacity-1">Trending</span>
+                <span class="text-white opacity-1 text-sm md:text-[20px]">Trending</span>
               </div>
             </a>
           </div>
-          <a href="" class="text-white text-[28px] font-bold">
+          <a href="" class="text-white text-[24px] md:text-[28px] font-bold relative z-40 md:!leading-8 mr-5">
             Reaksi Ayah Mirna Salihin Dipolisikan Eks Pegawai: Mereka Mau Minta Pesangon Lagi
           </a>
-          <p class="text-white">
+          <p class="text-white text-sm md:text-[20px] mr-5">
             Menurut Edi, para karyawan yang melaporkannya ke polisi karena tak puas dengan uang pesangon.
             yang bisa...
           </p>
           <a href=""
-            class="py-3 px-5 rounded-3xl bg-[#780B0B] drop-shadow-xl text-white flex flex-row items-center justify-center">
+            class="py-3 px-5 rounded-3xl bg-[#780B0B] drop-shadow-xl text-white flex flex-row items-center justify-center relative z-40 mr-5 md:mr-0">
             <button>Baca Selengkapnya</button>
             <img src="img/icon-click.png" alt="click">
           </a>
           <br>
         </div>
-        <div id="slide2"
-          class="swiper-slider w-[400px] h-[800px] bg-[url('img/card-content.png')] brightness-90 bg-cover bg-center rounded-2xl flex flex-col justify-end px-10 gap-4">
-          <div class="flex flex-row items-center gap-5">
-            <span class="text-white text-[20px]">2.</span>
-            <h1 class="text-[#E9C46A] text-[20px]">
+        <div
+          class="swiper-container bg-[#151521] swiper-slide w-full my-10 h-screen md:!h-[800px] bg-[url('img/card-content.png')] brightness-90 bg-cover bg-center md:rounded-3xl flex flex-col justify-end px-10 gap-4 rounded-none">
+          <div class="flex flex-row items-center gap-5 relative z-40">
+            <span class="text-white text-sm md:text-[20px]">2.</span>
+            <h1 class="text-[#E9C46A] text-sm md:text-[20px]">
               Anwar Usman
             </h1>
-            <a href="">
+            <a href="" class="relative z-40">
               <div class="py-1 px-4 bg-[#D9D9D9]/20 rounded-xl">
-                <span class="text-white opacity-1">Trending</span>
+                <span class="text-white opacity-1 text-sm md:text-[20px]">Trending</span>
               </div>
             </a>
           </div>
-          <a href="" class="text-white text-[28px] font-bold">
+          <a href="" class="text-white text-[24px] md:text-[28px] font-bold relative z-40 md:!leading-8 mr-5">
             Reaksi Ayah Mirna Salihin Dipolisikan Eks Pegawai: Mereka Mau Minta Pesangon Lagi
           </a>
-          <p class="text-white">
+          <p class="text-white text-sm md:text-[20px] mr-5">
             Menurut Edi, para karyawan yang melaporkannya ke polisi karena tak puas dengan uang pesangon.
             yang bisa...
           </p>
           <a href=""
-            class="py-3 px-5 rounded-3xl bg-[#780B0B] drop-shadow-xl text-white flex flex-row items-center justify-center">
+            class="py-3 px-5 rounded-3xl bg-[#780B0B] drop-shadow-xl text-white flex flex-row items-center justify-center relative z-40 mr-5 md:mr-0">
+            <button>Baca Selengkapnya</button>
+            <img src="img/icon-click.png" alt="click">
+          </a>
+          <br>
+        </div>
+        <div
+          class="swiper-container bg-[#151521] swiper-slide w-full h-screen md:!h-[800px] bg-[url('img/card-content.png')] brightness-90 bg-cover bg-center md:rounded-3xl flex flex-col justify-end px-10 gap-4 rounded-none">
+          <div class="flex flex-row items-center gap-5 relative z-40">
+            <span class="text-white text-sm md:text-[20px]">3.</span>
+            <h1 class="text-[#E9C46A] text-sm md:text-[20px]">
+              Anwar Usman
+            </h1>
+            <a href="" class="relative z-40">
+              <div class="py-1 px-4 bg-[#D9D9D9]/20 rounded-xl">
+                <span class="text-white opacity-1 text-sm md:text-[20px]">Trending</span>
+              </div>
+            </a>
+          </div>
+          <a href="" class="text-white text-[24px] md:text-[28px] font-bold relative z-40 md:!leading-8 mr-5">
+            Reaksi Ayah Mirna Salihin Dipolisikan Eks Pegawai: Mereka Mau Minta Pesangon Lagi
+          </a>
+          <p class="text-white relative z-40">
+            Menurut Edi, para karyawan yang melaporkannya ke polisi karena tak puas dengan uang pesangon.
+            yang bisa...
+          </p>
+          <a href=""
+            class="py-3 px-5 rounded-3xl bg-[#780B0B] drop-shadow-xl text-white flex flex-row items-center justify-center relative z-40 mr-5 md:mr-0">
             <button>Baca Selengkapnya</button>
             <img src="img/icon-click.png" alt="click">
           </a>
           <br>
         </div>
       </div>
-      <div class="flex flex-col justify-end items-end gap-4 mb-20">
-        <a class="py-1.5 px-1.5 bg-white rounded-xl" href="">
-          <img src="img/home.png" alt="" width="20">
-        </a>
-        <a class="py-1.5 px-1.5 bg-white rounded-xl" href="">
-          <img src="img/share.png" alt="" width="20">
-        </a>
-        <a class="py-1.5 px-1.5 bg-white rounded-xl" href="">
-          <img src="img/before.png" alt="" width="20">
-        </a>
-        <a class="swiper-pagination relative py-1.5 px-1.5 bg-white rounded-xl" href="">
-          <img src="img/next.png" alt="" width="20">
-        </a>
-      </div>
-    </div>
   </main>
-  <aside class="h-[100dvh] rounded-tl-xl rounded-bl-xl flex flex-col justify-between bg-[#232335]">
+  <div
+    class="relative z-20 right-0 top-8 bottom-0 -left-0 mx-3 flex flex-col justify-end items-end gap-4 mb-20 md:-top-20 min-[1700px]:-left-52 max-[1690px]:-left-52 max-[1612px]:-left-40 max-[1505px]:-left-28 max-[1416px]:-left-20 max-[1349px]:-left-10 max-[1280px]:-left-48 max-[1190px]:-left-32 max-[1062px]:-left-20 max-[968px]:-left-10 max-[888px]:-left-5 max-[846px]:-left-2">
+    <button class="py-2 px-2 bg-white rounded-xl" href="">
+      <img src="img/home.png" alt="" width="20">
+    </button>
+    <button class="py-2 px-2 bg-white rounded-xl" href="">
+      <img src="img/share.png" alt="" width="20">
+    </button>
+    <button class="prevButton py-2 px-2 bg-white rounded-xl" href="">
+      <img src="img/before.png" alt="" width="20">
+    </button>
+    <button class="nextButton relative py-2 px-2 bg-white rounded-xl" href="">
+      <img src="img/next.png" alt="" width="20">
+    </button>
+  </div>
+  <aside class="h-[100dvh] rounded-tl-xl rounded-bl-xl xl:flex xl:flex-col xl:justify-between bg-[#232335] hidden">
     <div class="overflow-y-scroll h-[650px] py-10 px-10">
       <h1 class="text-white text-2xl font-extrabold font-sans">
         Berita Populer
@@ -133,7 +178,7 @@
       <ol class="text-[#4EDFFF] list-decimal pl-5 w-[300px]">
         <li>
           <a href="">
-            <p class="text-white">
+            <p class="text-white font-semibold text-[16px]">
               Bos Hotel Alexis Alex Tirta Penuhi Panggilan Polisi, Siap
               Dikonfrontir dengan Firli Bahuri
             </p>
@@ -142,7 +187,7 @@
         <br />
         <li>
           <a href="">
-            <p class="text-white">
+            <p class="text-white font-semibold text-[16px]">
               Jokowi Melawat ke Dubai, Hadiri KTT Perubahan Iklim COP28
             </p>
           </a>
@@ -150,7 +195,7 @@
         <br />
         <li>
           <a href="">
-            <p class="text-white">
+            <p class="text-white font-semibold text-[16px]">
               FX Rudi: Kalau Tersinggung Jadi Petugas Partai Ya Suruh Nyalonin Rakyat Dulu Waktu Presiden
             </p>
           </a>
@@ -158,7 +203,7 @@
         <br />
         <li>
           <a href="">
-            <p class="text-white">
+            <p class="text-white font-semibold text-[16px]">
               Ganjar Kampanye Perdana ke Merauke dan Mahfud ke Sabang, Ini Maknanya
             </p>
           </a>
@@ -166,7 +211,7 @@
         <br />
         <li>
           <a href="">
-            <p class="text-white">
+            <p class="text-white font-semibold text-[16px]">
               Malah Bahas Matematika, 8 Foto Lucu Isi Chat Jerome Polin Dengan Sang Adik!
             </p>
           </a>
@@ -174,7 +219,7 @@
         <br />
         <li>
           <a href="">
-            <p class="text-white">
+            <p class="text-white font-semibold text-[16px]">
               Bos Hotel Alexis Alex Tirta Penuhi Panggilan Polisi, Siap
               Dikonfrontir dengan Firli Bahuri
             </p>
@@ -183,7 +228,7 @@
         <br />
         <li>
           <a href="">
-            <p class="text-white">
+            <p class="text-white font-semibold text-[16px]">
               Bos Hotel Alexis Alex Tirta Penuhi Panggilan Polisi, Siap
               Dikonfrontir dengan Firli Bahuri
             </p>
@@ -192,7 +237,7 @@
         <br />
         <li>
           <a href="">
-            <p class="text-white">
+            <p class="text-white font-semibold text-[16px]">
               Bos Hotel Alexis Alex Tirta Penuhi Panggilan Polisi, Siap
               Dikonfrontir dengan Firli Bahuri
             </p>
@@ -201,7 +246,7 @@
         <br />
         <li>
           <a href="">
-            <p class="text-white">
+            <p class="text-white font-semibold text-[16px]">
               Bos Hotel Alexis Alex Tirta Penuhi Panggilan Polisi, Siap
               Dikonfrontir dengan Firli Bahuri
             </p>
@@ -210,7 +255,7 @@
         <br />
         <li>
           <a href="">
-            <p class="text-white">
+            <p class="text-white font-semibold text-[16px]">
               Bos Hotel Alexis Alex Tirta Penuhi Panggilan Polisi, Siap
               Dikonfrontir dengan Firli Bahuri
             </p>
@@ -228,21 +273,7 @@
       </p>
     </footer>
   </aside>
-  <script src="script.js"></script>
-  <script>
-   var swiper = new Swiper(".mySwiper", {
-      direction: "vertical",
-      initialSlide: 0,
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-    });
-
-    function nextSlide() {
-      swiper.slideNext();
-    }
-  </script>
+  <script type="module" src="script.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </body>
 

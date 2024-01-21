@@ -1,3 +1,5 @@
+import Swiper from "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs";
+
 const data = [
 	{
 		id: "1",
@@ -14,13 +16,15 @@ const Copyright = document.getElementById("copyright");
 Copyright.innerHTML =
 	"Copyright  &copy " + new Date().getFullYear() + " Aktual.com";
 
-var swiper = new Swiper(".mySwiper", {
-	direction: "vertical",
-	pagination: {
-		el: ".swiper-pagination",
-		clickable: true,
-	},
-});
+ const swiper = new Swiper(".mySwiper", {
+		direction: "vertical",
+		centeredSlides: true,
+		slidesPerView: "auto",
+		navigation: {
+			nextEl: ".nextButton",
+			prevEl: ".prevButton",
+	 },
+ });
 
 // function renderDummyData() {
 // 	const container = document.getElementById("main");
