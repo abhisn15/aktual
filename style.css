@@ -1,0 +1,36 @@
+html,
+    body {
+      position: relative;
+      height: 100%;
+    }
+
+    body {
+      background: #eee;
+      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      color: #000;
+      margin: 0;
+      padding: 0;
+    }
+
+    .swiper {
+      width: 100%;
+    }
+
+    .swiper-slide {
+      font-size: 18px;
+      background: #fff;
+      display: flex;
+    }
+
+    .swiper-slide img {
+      display: block;
+      margin-left: 10px;
+      object-fit: cover;
+    }
+
+    .swiper-pagination-vertical.swiper-pagination-bullets,
+    .swiper-vertical>.swiper-pagination-bullets {
+      width: 34%;
+      top: 74%;
+    }
