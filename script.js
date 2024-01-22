@@ -12,19 +12,44 @@ const data = [
 ];
 
 const Copyright = document.getElementById("copyright");
+const btnPrev = document.querySelector('.prevButton');
+const hamburgerBar = document.querySelector('.hamburgerBar');
+const closeBar = document.querySelector('.closeBar');
+const sideBar = document.querySelector('.sideBar');
+
+hamburgerBar.addEventListener('click', () => {
+	sideBar.classList.toggle('hidden');
+})
+
+closeBar.addEventListener('click', () => {
+	sideBar.classList.add('hidden')
+})
 
 Copyright.innerHTML =
 	"Copyright  &copy " + new Date().getFullYear() + " Aktual.com";
 
- const swiper = new Swiper(".mySwiper", {
-		direction: "vertical",
-		centeredSlides: true,
-		slidesPerView: "auto",
-		navigation: {
-			nextEl: ".nextButton",
-			prevEl: ".prevButton",
-	 },
- });
+const swiper = new Swiper(".mySwiper", {
+	direction: "vertical",
+	centeredSlides: true,
+	slidesPerView: "auto",
+	initialSlide: 0,
+	navigation: {
+		nextEl: ".nextButton",
+		prevEl: ".prevButton",
+	},
+});
+
+if (swiper.activeIndex === 0) {
+	btnPrev.classList.add("bg-white/25");
+}
+
+swiper.on("slideChange", () => {
+	if (swiper.activeIndex === 0) {
+		btnPrev.classList.add("bg-white/25");
+	} else {
+		btnPrev.classList.remove("bg-white/25");
+	}
+});
 
 // function renderDummyData() {
 // 	const container = document.getElementById("main");

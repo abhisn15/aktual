@@ -49,7 +49,7 @@
 
 <body class="flex md:justify-between bg-[#151521] overflow-hidden">
   <header
-    class="w-[320px] h-[100dvh] py-10 px-8 rounded-tr-xl rounded-br-xl bg-[#232335] hidden md:block md:relative md:z-40">
+    class="sideBar flex flex-col justify-between static z-40 md:w-[320px] w-[100%] h-[100dvh] py-10 px-8 rounded-tr-xl rounded-br-xl bg-[#232335] hidden md:block md:relative md:z-40">
     <nav>
       <a href="/">
         <img src="img/logo.png" alt="aktual" width="120" height="58" />
@@ -66,6 +66,14 @@
         <li><a href="">Sejarah</a></li>
       </ul>
     </nav>
+    <div class="flex justify-end md:hidden">
+      <button class="closeBar">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M14 1.41L12.59 0L7 5.59L1.41 0L0 1.41L5.59 7L0 12.59L1.41 14L7 8.41L12.59 14L14 12.59L8.41 7L14 1.41Z"
+          fill="white"></path>
+        </svg>
+      </button>
+    </div>
   </header>
   <main class="flex-1 md:mx-2">
     <div class="swiper absolute md:relative mySwiper w-full md:max-w-md h-full">
@@ -84,15 +92,15 @@
               </div>
             </a>
           </div>
-          <a href="" class="text-white text-[24px] md:text-[28px] font-bold relative z-40 md:!leading-8 mr-5">
+          <a href="" class="text-white text-[24px] md:text-[28px] font-bold relative z-40 md:!leading-8 mr-8">
             Reaksi Ayah Mirna Salihin Dipolisikan Eks Pegawai: Mereka Mau Minta Pesangon Lagi
           </a>
-          <p class="text-white text-sm md:text-[20px] mr-5">
+          <p class="text-white text-sm md:text-[20px] mr-8">
             Menurut Edi, para karyawan yang melaporkannya ke polisi karena tak puas dengan uang pesangon.
             yang bisa...
           </p>
           <a href=""
-            class="py-3 px-5 rounded-3xl bg-[#780B0B] drop-shadow-xl text-white flex flex-row items-center justify-center relative z-40 mr-5 md:mr-0">
+            class="py-3 px-5 rounded-3xl bg-[#780B0B] drop-shadow-xl text-white flex flex-row items-center justify-center relative z-40 mr-8 md:mr-0">
             <button>Baca Selengkapnya</button>
             <img src="img/icon-click.png" alt="click">
           </a>
@@ -111,15 +119,15 @@
               </div>
             </a>
           </div>
-          <a href="" class="text-white text-[24px] md:text-[28px] font-bold relative z-40 md:!leading-8 mr-5">
+          <a href="" class="text-white text-[24px] md:text-[28px] font-bold relative z-40 md:!leading-8 mr-8">
             Reaksi Ayah Mirna Salihin Dipolisikan Eks Pegawai: Mereka Mau Minta Pesangon Lagi
           </a>
-          <p class="text-white text-sm md:text-[20px] mr-5">
+          <p class="text-white text-sm md:text-[20px] mr-8">
             Menurut Edi, para karyawan yang melaporkannya ke polisi karena tak puas dengan uang pesangon.
             yang bisa...
           </p>
           <a href=""
-            class="py-3 px-5 rounded-3xl bg-[#780B0B] drop-shadow-xl text-white flex flex-row items-center justify-center relative z-40 mr-5 md:mr-0">
+            class="py-3 px-5 rounded-3xl bg-[#780B0B] drop-shadow-xl text-white flex flex-row items-center justify-center relative z-40 mr-8 md:mr-0">
             <button>Baca Selengkapnya</button>
             <img src="img/icon-click.png" alt="click">
           </a>
@@ -138,15 +146,15 @@
               </div>
             </a>
           </div>
-          <a href="" class="text-white text-[24px] md:text-[28px] font-bold relative z-40 md:!leading-8 mr-5">
+          <a href="" class="text-white text-[24px] md:text-[28px] font-bold relative z-40 md:!leading-8 mr-8">
             Reaksi Ayah Mirna Salihin Dipolisikan Eks Pegawai: Mereka Mau Minta Pesangon Lagi
           </a>
-          <p class="text-white relative z-40">
+          <p class="text-white relative z-40 mr-8">
             Menurut Edi, para karyawan yang melaporkannya ke polisi karena tak puas dengan uang pesangon.
             yang bisa...
           </p>
           <a href=""
-            class="py-3 px-5 rounded-3xl bg-[#780B0B] drop-shadow-xl text-white flex flex-row items-center justify-center relative z-40 mr-5 md:mr-0">
+            class="py-3 px-5 rounded-3xl bg-[#780B0B] drop-shadow-xl text-white flex flex-row items-center justify-center relative z-40 mr-8 md:mr-0">
             <button>Baca Selengkapnya</button>
             <img src="img/icon-click.png" alt="click">
           </a>
@@ -155,7 +163,7 @@
       </div>
   </main>
   <div
-    class="relative z-20 right-0 top-8 bottom-0 -left-0 mx-3 flex flex-col justify-end items-end gap-4 mb-20 md:-top-20 min-[1700px]:-left-52 max-[1690px]:-left-52 max-[1612px]:-left-40 max-[1505px]:-left-28 max-[1416px]:-left-20 max-[1349px]:-left-10 max-[1280px]:-left-48 max-[1190px]:-left-32 max-[1062px]:-left-20 max-[968px]:-left-10 max-[888px]:-left-5 max-[846px]:-left-2">
+    class="absolute md:relative z-20 right-0 top-8 -bottom-7 -left-0 mx-3 flex flex-col justify-end items-end gap-4 mb-20 md:-top-20 min-[1700px]:-left-52 max-[1690px]:-left-52 max-[1612px]:-left-40 max-[1505px]:-left-28 max-[1416px]:-left-20 max-[1349px]:-left-10 max-[1280px]:-left-48 max-[1190px]:-left-32 max-[1062px]:-left-20 max-[968px]:-left-10 max-[888px]:-left-5 max-[846px]:-left-2">
     <button class="py-2 px-2 bg-white rounded-xl" href="">
       <img src="img/home.png" alt="" width="20">
     </button>
@@ -167,6 +175,12 @@
     </button>
     <button class="nextButton relative py-2 px-2 bg-white rounded-xl" href="">
       <img src="img/next.png" alt="" width="20">
+    </button>
+    <button class="hamburgerBar relative py-3 px-2 bg-white rounded-xl md:hidden" href="">
+      <svg width="22" height="14" viewBox="0 0 22 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0.5 0H21.5V2.33333H0.5V0ZM0.5 8.16667V5.83333H18V8.16667H0.5ZM0.5 14V11.6667H21.5V14H0.5Z" fill="black">
+        </path>
+      </svg>
     </button>
   </div>
   <aside class="h-[100dvh] rounded-tl-xl rounded-bl-xl xl:flex xl:flex-col xl:justify-between bg-[#232335] hidden">
