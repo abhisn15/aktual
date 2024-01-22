@@ -12,18 +12,19 @@ const data = [
 ];
 
 const Copyright = document.getElementById("copyright");
-const btnPrev = document.querySelector('.prevButton');
-const hamburgerBar = document.querySelector('.hamburgerBar');
-const closeBar = document.querySelector('.closeBar');
-const sideBar = document.querySelector('.sideBar');
+const nextSlide = document.getElementById("nextSlide");
+const btnPrev = document.querySelector(".prevButton");
+const hamburgerBar = document.querySelector(".hamburgerBar");
+const closeBar = document.querySelector(".closeBar");
+const sideBar = document.querySelector(".sideBar");
 
-hamburgerBar.addEventListener('click', () => {
-	sideBar.classList.toggle('hidden');
-})
+hamburgerBar.addEventListener("click", () => {
+	sideBar.classList.toggle("hidden");
+});
 
-closeBar.addEventListener('click', () => {
-	sideBar.classList.add('hidden')
-})
+closeBar.addEventListener("click", () => {
+	sideBar.classList.add("hidden");
+});
 
 Copyright.innerHTML =
 	"Copyright  &copy " + new Date().getFullYear() + " Aktual.com";
@@ -49,7 +50,17 @@ swiper.on("slideChange", () => {
 	} else {
 		btnPrev.classList.remove("bg-white/25");
 	}
+
+	const currentSlideNumber = swiper.activeIndex + 1;
+	const totalSlides = swiper.slides.length;
+	nextSlide.innerHTML = `${currentSlideNumber}/${totalSlides}`;
 });
+
+// Inisialisasi informasi slide pada awal
+const initialSlideNumber = swiper.activeIndex + 1;
+const totalSlides = swiper.slides.length;
+nextSlide.innerHTML = `${initialSlideNumber}/${totalSlides}`;
+
 
 // function renderDummyData() {
 // 	const container = document.getElementById("main");
